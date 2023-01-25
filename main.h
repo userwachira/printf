@@ -1,6 +1,5 @@
 #ifndef _MAIN_H_
 #define _MAIN_H_
-
 #include <stdarg.h>
 #include <stdio.h>
 #include <unistd.h>
@@ -18,8 +17,6 @@
 /* SIZES */
 #define S_LONG 2
 #define S_SHORT 1
-
-int _printf(const char *format, ...);
 
 /**
  * struct fmt - struct op

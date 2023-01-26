@@ -36,7 +36,6 @@ struct fmt
  */
 
 typedef  struct fmt fmt_t;
-
 int _printf(const char *format, ...);
 int handle_print(const char *fmt, int *i, va_list list, char buffer[],
 int flags, int width, int precision, int size);
@@ -63,7 +62,7 @@ int print_hexadecimal(va_list types, char buffer[], int flags, int width,
 	       int precision, int size);
 int print_hexa_upper(va_list types, char buffer[], int flags, int width,
 		int precision, int size);
-int print_hexa(va_list types, char buffer[], int flags, int width,
+int print_hexa(va_list types, char map_to[], char buffer[], int flags, char flag_ch, int width,
 	       int precsion, int size);
 
 /*function to print non printable characters*/
@@ -109,4 +108,16 @@ int is_digit(char);
 long int convert_size_number(long int num, int size);
 long int convert_size_unsgnd(unsigned long int num, int size);
 
-#endif /*MAIN_H*/
+/******printfs*********/
+int printf_char(va_list val);
+int printf_bin(va_list val);
+int printf_srev(va_list args);
+int printf_rot13(va_list args);
+int _strlenc(const char *s);
+int _strlen(char *s);
+int printf_unsigned(va_list args);
+int printf_HEX(va_list val);
+int printf_HEX_aux(unsigned int num);
+int _putchar(char c);
+
+#endif /* MAIN_H */
